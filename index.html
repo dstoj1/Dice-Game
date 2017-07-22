@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dice Math</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>This is the title of your website</title>
+<meta name="description" content="Description of the page content" /> <link  
+ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+ rel="stylesheet" integrity="
+ sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw=  
+ sha512-nNo+yCHEyn0smMxSswnf/OnX6/
+ KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="  anonymous">      
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <style>
+  body {
+      position: relative;
+  }
+  .affix {
+      top: 20px;
+  }
+  div.col-sm-9 div {
+      height: 250px;
+      font-size: 28px;
+  }
+  #addition {color: #fff; background-color: red;}
+  #subtraction {color: #fff; background-color: blue;}
+  #multiplication {color: #fff; background-color: red;}
+  #division {color: #fff; background-color: blue;}
+  
+  
+  @media screen and (max-width: 810px) {
+    #addition, #subtraction, #multiplication, #division  {
+        margin-left: 150px;
+    }
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+
+<div class="container-fluid" style="background-color:blue;color:#fff;height:330px;">
+  <img src="https://thumb9.shutterstock.com/display_pic_with_logo/170137876/651108556/stock-vector-kids-in-classroom-school-children-sitting-at-their-desks-multicultural-kids-group-sit-at-desks-in-651108556.jpg" class="img-circle" alt="Kids Sitting at a Desk" style="float:right; width:375px;height:325px;">
+  <h1 style="font-size:75px;">Dice Math</h1>
+  <h3>Roll the dice. (Click the Die to Start.) </h3>
+  <p style="font-size:10px;">Choose if you would like your child to practice Adding, Subtraction, Multiplication or Division.  </p>
+  <p>Then have them roll the dice. Whatever numbers rolled your child will either Add, Subtract, Multiply or Divide the numbers.</p>
+  <p>When your child gets 3 correct answers they will move to the next level. If all the levels are completed they WIN!!!! Once they have completed the section they were working on they can move to another section.  GOOD LUCK!</p>
+
+</div>
+<br>
+
+<div class="container">
+  <div class="row">
+    <nav class="col-sm-3" style="float:left;" id="myScrollspy">
+    <h3>Choose a Challenge</h3>
+    <br>
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+    
+            <li><a style="color:black;" href="#addition">Addition</a></li>
+            <li><a style="color:black;" href="#subtraction">Subtraction</a></li>
+            <li><a style="color:black;" href="#multiplication">Multiplication</a></li>
+            <li><a style="color:black;" href="#division">Division</a></li>
+        
+        </li>
+      </ul>
+    </nav>
+    <div class="col-sm-9">
+      <div id="addition">    
+        <h1 class ="boxparagraph">Addition</h1>
+        <p class ="boxparagraph" style="font-size:18px;">Your child will be challenged with Easy, Intermediante or Advanced problems</p>
+        <p class ="boxparagraph" style="font-size:15px;">Easy  2+2=    3+1=</p>
+        <p class ="boxparagraph" style="font-size:15px;">Intermediate 10+4=   8+1=</p>
+        <p class ="boxparagraph" style="font-size:15px;">Advanced        20+1+11= </p>  
+        <button onclick="runEasySection()" style="float:right; position: relative; right:10px;" > <img style="height:60px; width:60px;" src="dice.jpg"> </button>
+      </div>
+      <div id="subtraction"> 
+        <h1 class ="boxparagraph">Subtraction</h1>
+        <p class ="boxparagraph" style="font-size:18px;">Your child will be challenged with Easy, Intermediante or Advanced problems</p>
+        <p class ="boxparagraph" style="font-size:15px;">Easy  2-1=    4-2=</p>
+        <p class ="boxparagraph" style="font-size:15px;">Intermediate 10-11=   12-1=</p>
+        <p class ="boxparagraph" style="font-size:15px;">Advanced        16-7=  19-11=</p>
+        <button onclick="runEasySubtraction()" style="float:right; position: relative; right:10px;" ><img style="height:60px; width:60px;" src="dice.jpg"> </button>
+      </div>        
+      <div id="multiplication">
+        <h1 class ="boxparagraph">Multiplication</h1>
+        <p class ="boxparagraph" style="font-size:18px;">Your child will be challenged with Easy, Intermediante or Advanced problems</p>
+        <p class ="boxparagraph" style="font-size:15px;">Easy  5*4=    6*2=</p>
+        <p class ="boxparagraph" style="font-size:15px;">Intermediate 8*1=   10*5=</p>
+        <p class ="boxparagraph" style="font-size:15px;">Advanced        11*8=   19*3=</p>
+        <button onclick="runEasyMultiplication()" style="float:right; position: relative; right:10px;" > <img style="height:60px; width:60px;" src="dice.jpg"> </button>
+      </div>
+      <div id="division">
+        <h1 class ="boxparagraph">Division</h1>
+        <p class ="boxparagraph" style="font-size:18px;">Your child will be challenged with Easy, Intermediante or Advanced problems</p>
+        <p class ="boxparagraph" style="font-size:15px;">Easy  2/1=    4/2=</p>
+        <p class ="boxparagraph" style="font-size:15px;">Intermediate 10/11=   13/1=</p>
+        <p class ="boxparagraph" style="font-size:15px;">Advanced        13/1= 20/2= </p><button onclick=" runEasyDivision()" style="float:right; position: relative; right:10px;" > <img style="height:60px; width:60px;" src="dice.jpg"> </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script type="text/javascript" src="game.js"></script>
+</body>
+</html>
+
+
+
+
+            
